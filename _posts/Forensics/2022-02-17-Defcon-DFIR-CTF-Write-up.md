@@ -1,5 +1,5 @@
 ---
-title: "2019 Defcon DFIR CTF Write-up (Memory Forensics)
+title: "2019 Defcon DFIR CTF Write-up (Memory Forensics)"
 classes: wide
 header:
   teaser: /assets/images/forensics/deafcon_ctf/logo.jpg
