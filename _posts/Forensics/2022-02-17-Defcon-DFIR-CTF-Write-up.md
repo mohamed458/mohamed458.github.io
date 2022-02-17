@@ -70,7 +70,7 @@ Solve:-
 
 We can use plug-in `pslist`  it list all processes run in the memory.
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem pslist
 ```
 
@@ -92,7 +92,7 @@ Solve:-
 
 Just use `pstree` plug-in and you will see the parents and children but I will `grep` the processes to save effort and I used `A1` to see 1 line under wscript process.
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem pstree |grep -A1 wscript.exe
 ```
 
@@ -116,7 +116,7 @@ Solve:-
 
 `netscan` plug-in is used to discover IPs and protocols in the memory and look under 'Local Address' column.
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem --profile=Win7SP1x64 netscan
 ```
 
@@ -138,7 +138,7 @@ Solve:-
 
 We still in `netscan` solution.. Just scroll down and look to **Foreign Address** column.
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem --profile=Win7SP1x64 netscan
 ```
 
@@ -162,7 +162,7 @@ Look to name, this is a dll file so we use `dlllist` plug-in and explore it's re
 
 use `grep` to specify the flag
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem --profile=Win7SP1x64 dlllist | grep VCRUNTIME140.dll -B 30
 ```
 
@@ -189,11 +189,11 @@ First, we will dump the executable file for malicious process.
 
 second, we will calculate the hash.
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem --profile=Win7SP1x64 procdump -p 3496 --dump-dir=./ 
 ```
 
-```
+```python
 md5sum executable.3496.exe
 ```
 
@@ -216,7 +216,7 @@ Use `hashdump` and check bob.
 
 result =  name : :id: : account hash : pass hash
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem --profile=Win7SP1x64 hashdump
 ```
 
@@ -239,7 +239,7 @@ Solve:-
 
 Just explore with `vadinfo` then use grep.
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem --profile=Win7SP1x64 vadinfo | grep "0xfffffa800577ba10" -A3
 ```
 
@@ -260,7 +260,7 @@ Solve:-
 
 From previous plug-in we can understand the results so we can grep with the right text.
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem--profile=Win7SP1x64 vadinfo | grep "Start 0x00000000033c0000 End 0x00000000033dffff" -A3
 ```
 
@@ -281,7 +281,7 @@ Solve:-
 
 With `cmdline`  plug-in we will get the result directly :dancer:
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem --profile=Win7SP1x64 cmdline |grep ".vbs"
 ```
 
@@ -302,7 +302,7 @@ Solve:-
 
 `shimache` plug-in gets it directly with grep.
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem --profile=Win7SP1x64 shimcache | grep "2019-03-07"
 ```
 
@@ -325,7 +325,7 @@ First, we will dump the memory space with contain the notepad content then.. We 
 
 After trying The flag is encoded :)  so we used `-e l`.
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem --profile=Win7SP1x64 memdump -p 3032 --dump-dir=./
 ```
 
@@ -354,7 +354,7 @@ For more about mft information look at [here](https://docs.microsoft.com/en-us/w
 
 `mftparser` plug-in can do our job.
 
-```
+```python
 python2 /opt/volatility/vol.py -f Triage.mem --profile=Win7SP1x64 mftparser | grep "59045" -A 20
 ```
 
