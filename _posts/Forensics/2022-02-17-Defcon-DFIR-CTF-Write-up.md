@@ -1,10 +1,10 @@
 ---
-title: "2019 Defcon DFIR CTF Write-up (Memory Forensics)"
+title: "Digging into memory"
 classes: wide
 header:
   teaser: /assets/images/forensics/Defcon_ctf_2019/logo.jpg
 ribbon: red
-description: "Vidar (forked from Arkei info stealer) is very popular info stealer written in C++..."
+description: "I’m solving memory forensics challenge with volatility2 framework from Defcon DFIR CTF 2019"
 categories:
   - Forensics
 toc: false
