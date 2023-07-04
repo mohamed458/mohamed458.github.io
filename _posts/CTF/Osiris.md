@@ -2,11 +2,11 @@
 title: "Osiris"
 classes: wide
 header:
-  teaser: /assets/images/crackmes/logo.jpg
-ribbon: DodgerBlue
+  teaser: /assets/images/CTF/Osiris/logo.jpg
+ribbon: Red
 description: ""
 categories:
-  - crackmes
+  - CTF
 toc: true
 ---
 
