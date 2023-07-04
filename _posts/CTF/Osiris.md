@@ -311,4 +311,4 @@ print(sentence)
 ```
 
 ![](/assets/images/CTF/Osiris/flag.PNG)
-
+FLAG : EGCERT{533_1f_y0u_d353Rv3_wh47_c0m35_n3x7}
