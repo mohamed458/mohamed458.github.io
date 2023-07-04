@@ -2,7 +2,7 @@
 main:
   - title: "Malware Analysis"
     url: /categories/#malware-analysis
-  - title: "CTF"
+  - title: "ctf"
     url: /categories/#CTF
   - title: "All Categories"
     url: /categories
