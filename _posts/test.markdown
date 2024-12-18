@@ -2,11 +2,11 @@
 title: "UnPacking lab 8.1"
 classes: wide
 header:
-  teaser: /assets/images/packing/logo.jpg
+  teaser: 
 ribbon: DodgerBlue
-description: "unpack upx manually "
+description: "test "
 categories:
-  - UnPacking
+  - Reverse Engineering
 toc: true
 ---
 
