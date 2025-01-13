@@ -58,13 +58,14 @@ title_separator          : "-"
 subtitle                 : "Malware Analysis & Reverse Engineering"
 name                     : "Mohamed Samir"
 description              : "Malware Analysis & Reverse Engineering"
-url                      : "https://mohamed458.github.io"
+url                      : "https://abosamra0x90.github.io/mohamed458.github.io"
 baseurl                  : "/mohamed458.github.io"
-repository               : "abosamra0x90.github.io/mohamed458.github.io/"
+repository               : "mohamed458.github.io/"
 teaser                   : "/assets/images/500x300.png"
 logo                     : "/assets/images/site_data/logo.png"
 masthead_title           : "Welcome to Mohamed Samir's Blog"
 words_per_minute         : 170
+
 
 comments:
   provider               : "disqus"
