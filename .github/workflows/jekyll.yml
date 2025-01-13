@@ -13,7 +13,16 @@
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-on: push
+on:
+  push:
+    branches:
+    - main
+    - release/*
+on:
+  pull_request:
+    branches:
+    - main
+
 # Site Settings
 locale                   : "en-US"
 title                    : "samir"
